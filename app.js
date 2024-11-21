@@ -27,6 +27,10 @@ app.use(bodyParser.json());
 
 app.use(router);
 
+app.get("/",(req,res)=>{
+    res.send("server running")
+})
+
 app.listen(process.env.PORT, () => {
     console.log("App is running in localhost:" + process.env.PORT);
 });
